@@ -3,6 +3,16 @@ entries:
   ctp:
   - apiVersion: v2
     appVersion: "2020090901"
+    created: "2021-05-18T07:51:07.763493781Z"
+    description: Clinical Trial Processor (CTP), provides all the processing features of a MIRC site.
+    digest: 85cafa3daff1cb252fdae54afaa728f91c05320e2dc59a495601962d7703ab67
+    name: ctp
+    type: application
+    urls:
+    - https://github.com/Australian-Imaging-Service/charts/releases/download/ctp-0.1.1/ctp-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: "2020090901"
     created: "2021-01-20T03:09:13.302585326Z"
     description: Clinical Trial Processor (CTP), provides all the processing features of a MIRC site.
     digest: ba2a1f67354fa267c8d104a8cf89af57e9b14c2136c27915ddf440bc952fb932
@@ -12,6 +22,21 @@ entries:
     - https://github.com/Australian-Imaging-Service/charts/releases/download/ctp-0.1.0/ctp-0.1.0.tgz
     version: 0.1.0
   xnat:
+  - apiVersion: v2
+    appVersion: 1.7.6
+    created: "2021-05-18T07:51:07.921548621Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ~9.8.7
+    description: XNAT imaging informatics platform
+    digest: c55090631cea91c5feb18ab213ccf6bf3e7b69270fd3910523cd2664214d82b4
+    name: xnat
+    type: application
+    urls:
+    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.4.1/xnat-0.4.1.tgz
+    version: 0.4.1
   - apiVersion: v2
     appVersion: 1.7.6
     created: "2021-02-09T14:32:35.546395586Z"
