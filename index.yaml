@@ -3,113 +3,28 @@ entries:
   ctp:
   - apiVersion: v2
     appVersion: "2020090901"
-    created: "2021-05-18T07:51:07.763493781Z"
+    created: "2021-07-23T00:46:20.852915823Z"
     description: Clinical Trial Processor (CTP), provides all the processing features of a MIRC site.
-    digest: 85cafa3daff1cb252fdae54afaa728f91c05320e2dc59a495601962d7703ab67
+    digest: 1d44560723977207496e4485a4afce68fabc9b545d61a73bdcdb4c35448b8ff2
     name: ctp
     type: application
     urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/ctp-0.1.1/ctp-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: "2020090901"
-    created: "2021-01-20T03:09:13.302585326Z"
-    description: Clinical Trial Processor (CTP), provides all the processing features of a MIRC site.
-    digest: ba2a1f67354fa267c8d104a8cf89af57e9b14c2136c27915ddf440bc952fb932
-    name: ctp
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/ctp-0.1.0/ctp-0.1.0.tgz
-    version: 0.1.0
+    - https://github.com/Prepultrue/charts/releases/download/ctp-0.2.0/ctp-0.2.0.tgz
+    version: 0.2.0
   xnat:
   - apiVersion: v2
     appVersion: 1.7.6
-    created: "2021-06-16T08:41:33.5309543Z"
+    created: "2021-07-23T00:46:20.991194053Z"
     dependencies:
     - condition: postgresqlEnabled
       name: postgresql
       repository: https://charts.bitnami.com/bitnami
       version: ~9.8.7
     description: XNAT imaging informatics platform
-    digest: 8f9a1512d180f83947ea7251338e7ffe3c6067383025cc624d46880aee010a64
+    digest: 93aeb899bbafa0f071aa0a31b2ff470bd29a457403e8f538625a6515dcfe7c9d
     name: xnat
     type: application
     urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.4.4/xnat-0.4.4.tgz
-    version: 0.4.4
-  - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-06-01T02:01:00.581140528Z"
-    dependencies:
-    - condition: postgresqlEnabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
-    description: XNAT imaging informatics platform
-    digest: 3b10aa4f8f0da955394827f3eb169023232a47035eb15949383c06e46c8f393f
-    name: xnat
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.4.3/xnat-0.4.3.tgz
-    version: 0.4.3
-  - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-05-25T01:28:20.173132621Z"
-    dependencies:
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
-    description: XNAT imaging informatics platform
-    digest: 586c8209968ea1b4794c1b3227e2bfa0ab55d35789ca35533b8a182c84a58a89
-    name: xnat
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.4.2/xnat-0.4.2.tgz
-    version: 0.4.2
-  - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-05-18T07:51:07.921548621Z"
-    dependencies:
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
-    description: XNAT imaging informatics platform
-    digest: c55090631cea91c5feb18ab213ccf6bf3e7b69270fd3910523cd2664214d82b4
-    name: xnat
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.4.1/xnat-0.4.1.tgz
-    version: 0.4.1
-  - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-02-09T14:32:35.546395586Z"
-    dependencies:
-    - condition: postgresqlEnabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
-    description: XNAT imaging informatics platform
-    digest: 28d51515337d141c38c8ccf5f9599adc167645a4c0804425f190c60e4492cf67
-    name: xnat
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.3.1/xnat-0.3.1.tgz
-    version: 0.3.1
-  - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-01-20T03:09:13.452469482Z"
-    dependencies:
-    - condition: postgresqlEnabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
-    description: XNAT imaging informatics platform
-    digest: 39809f47d4e010afd4ea95e276d020bc0e9bf2e42c601cfdcbb7a179fe36558a
-    name: xnat
-    type: application
-    urls:
-    - https://github.com/Australian-Imaging-Service/charts/releases/download/xnat-0.3.0/xnat-0.3.0.tgz
-    version: 0.3.0
-generated: "2021-01-20T03:09:13.164140707Z"
+    - https://github.com/Prepultrue/charts/releases/download/xnat-0.5.0/xnat-0.5.0.tgz
+    version: 0.5.0
+generated: "2021-07-23T00:46:20.609777323Z"
