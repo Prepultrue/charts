@@ -3,28 +3,28 @@ entries:
   ctp:
   - apiVersion: v2
     appVersion: "2020090901"
-    created: "2021-07-23T00:46:20.852915823Z"
+    created: "2021-11-19T05:02:53.947670458Z"
     description: Clinical Trial Processor (CTP), provides all the processing features of a MIRC site.
-    digest: 1d44560723977207496e4485a4afce68fabc9b545d61a73bdcdb4c35448b8ff2
+    digest: 507625de713e013b4f5d56a9361c9b9a97acebf3990e65a0448db3d756a99920
     name: ctp
     type: application
     urls:
-    - https://github.com/Prepultrue/charts/releases/download/ctp-0.2.0/ctp-0.2.0.tgz
-    version: 0.2.0
+    - https://github.com/Prepultrue/charts/releases/download/ctp-0.2.1/ctp-0.2.1.tgz
+    version: 0.2.1
   xnat:
   - apiVersion: v2
-    appVersion: 1.7.6
-    created: "2021-07-23T00:46:20.991194053Z"
+    appVersion: 1.8.2
+    created: "2021-11-19T05:02:54.106169527Z"
     dependencies:
-    - condition: postgresqlEnabled
+    - condition: postgresql.enabled
       name: postgresql
       repository: https://charts.bitnami.com/bitnami
-      version: ~9.8.7
+      version: ~10.9.4
     description: XNAT imaging informatics platform
-    digest: 93aeb899bbafa0f071aa0a31b2ff470bd29a457403e8f538625a6515dcfe7c9d
+    digest: abfee47a5343adc7a34a7c010a1e7b77deb28f27ee253e311a452a3287722e3b
     name: xnat
     type: application
     urls:
-    - https://github.com/Prepultrue/charts/releases/download/xnat-0.5.0/xnat-0.5.0.tgz
-    version: 0.5.0
-generated: "2021-07-23T00:46:20.609777323Z"
+    - https://github.com/Prepultrue/charts/releases/download/xnat-0.6.3/xnat-0.6.3.tgz
+    version: 0.6.3
+generated: "2021-11-19T05:02:53.711965733Z"
