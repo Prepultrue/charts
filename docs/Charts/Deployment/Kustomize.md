@@ -140,7 +140,7 @@ OK, so let's have a look at our patch file and see what it is actually doing.
   path: "/spec/sessionAffinity"
 {{</ code >}}
 
-Pretty simple really. `- op: remove` just removes whatever we tell it to in our service.yaml file. If we look through our file, we find `spec` and then under that we find `sessionAffinity` and then remove that.  
+Pretty simple really. `- op: remove` just removes whatever we tell it to in our `service.yaml` file. If we look through our file, we find `spec` and then under that we find `sessionAffinity` and then remove that.  
 In this case if we remove all the other code to simplify things you get this:  
 ```yaml
 spec:

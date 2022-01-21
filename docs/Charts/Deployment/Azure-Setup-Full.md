@@ -69,7 +69,7 @@ watch kubectl -nxnat get all
 ```
 
 It will complain that the Postgresql password is empty and needs updating.
-Create an override values file (in this case values-aks.yaml but feel free to call it what you wish) and add the following inserting your own desired values:
+Create an override values file (in this case `values-aks.yaml` but feel free to call it what you wish) and add the following inserting your own desired values:
 
 ```yaml
 xnat-web:
@@ -81,9 +81,9 @@ xnat-web:
 
 ### Update volume / persistence information
 It turns out that there is an issue with Storage classes that means that the volumes are not created automatically.
-We need to make a small change to the storageClass configuration for the ReadWriteOnce volumes and create new external volumes for the ReadWriteMany ones.
+We need to make a small change to the `storageClass` configuration for the `ReadWriteOnce` volumes and create new external volumes for the `ReadWriteMany` ones.
 
-Firstly, we create our own Azure files volumes for archive and prearchive and make a slight adjustment to the values configuration and apply as an override.
+Firstly, we create our own Azure files volumes for `archive` and `prearchive` and make a slight adjustment to the values configuration and apply as an override.
 
 Follow this document for the details of how to do that:  
 
@@ -133,7 +133,7 @@ echo Storage account key: $STORAGE_KEY
 
 Make a note of the Storage account name and key as you will need them.
 
-Now repeat this process but update the Share name to xnat-xnat-web-prearchive and then again with xnat-xnat-web-build. Run this first and then repeat the rest of the commands:  
+Now repeat this process but update the Share name to `xnat-xnat-web-prearchive` and then again with `xnat-xnat-web-build`. Run this first and then repeat the rest of the commands:  
 ```bash
 AKS_PERS_SHARE_NAME=xnat-xnat-web-prearchive
 ```
@@ -246,7 +246,7 @@ We should now have two newly created volumes our Helm chart can mount.
 
 
 ## Update our override values file for our Helm chart.
-Edit your values-aks.yaml file from above and add the following in (postgresql entries already added):
+Edit your `values-aks.yaml` file from above and add the following in (postgresql entries already added):
 
 Paste the following:
 
@@ -326,7 +326,7 @@ az network public-ip create --resource-group <output from previous command> --na
 
 
 #### Point your FQDN to the public IP address you created
-For the Letsencrypt certificate issuer to work it needs to be based on a working FQDN (fully qualified domain name), so in whatever DNS manager you use, create a new A record and point your xnat FQDN (xnat.example.com for example) to the IP address you just created.  
+For the Letsencrypt certificate issuer to work it needs to be based on a working FQDN (fully qualified domain name), so in whatever DNS manager you use, create a new A record and point your xnat FQDN (`xnat.example.com` for example) to the IP address you just created.  
 
 Add the ingress-nginx repo:  
 ```bash
@@ -350,7 +350,7 @@ Please ensure to update the details above to suit your environment - including n
 kubectl label namespace xnat cert-manager.io/disable-validation=true
 helm repo add jetstack https://charts.jetstack.io
 helm repo update
-helm install   cert-manager   --namespace xnat   --version v1.3.1   --set installCRDs=true   --set nodeSelector."beta\.kubernetes\.io/os"=linux   jetstack/cert-manager
+helm install cert-manager --namespace xnat --version v1.3.1 --set installCRDs=true --set nodeSelector."beta\.kubernetes\.io/os"=linux jetstack/cert-manager
 ```
 You can find a write up of these commands and what they do in the Microsoft article.
 
@@ -380,8 +380,11 @@ spec:
                 "kubernetes.io/os": linux
 {{</ code >}}
 
-In our case, we want production Letsencrypt certificates hence letsencrypt-prod (mentioned twice here and in values-aks.yaml). If you are doing testing you can use letsencrypt-staging. See Microsoft article for more details.  
+In our case, we want production Letsencrypt certificates hence letsencrypt-prod (mentioned twice here and in `values-aks.yaml`). If you are doing testing you can use `letsencrypt-staging`. See Microsoft article for more details.  
+
+{{% alert color="warning" %}}
 Please do not forget to use your email address here.
+{{% /alert %}}
 
 Apply the yaml file:  
 ```bash
@@ -451,7 +454,7 @@ xnat-web:
 {{</ code >}}
 
 Change `yourxnat.example.com` to whatever you want your XNAT FQDN to be.  
-If you are using Letsencrypt-staging, update the cert-manager.io annotation accordingly.
+If you are using `Letsencrypt-staging`, update the `cert-manager.io` annotation accordingly.
 
 Now update your helm chart and you should now have a fully working Azure XNAT installation with HTTPS redirection enabled, working volumes and fully automated certificates with automatic renewal.
 
